@@ -1,14 +1,28 @@
 <div class='drink-container'>
   <div class='list'>
-    <h1>Cocktail List</h1>
 
-    <% @cocktails.each do |cocktail| %>
-      <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-      <%= cl_image_tag cocktail.photo, height: 100, width: 100, crop: :fill %>
-    <% end %>
+    <div>
+      <h1>Shake your Cocktail!</h1>
+    </div>
+
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+        <div class="card-category"><%= cocktail.name %></div>
+        <%= link_to cocktail.name, cocktail_path(cocktail), class:"card-link" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div class="banner">
   <%= link_to "New cocktail", new_cocktail_path, class:"btn-transparent" %>
   </div>
 </div>
+
+
+
+
+
+
