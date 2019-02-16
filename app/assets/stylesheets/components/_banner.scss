@@ -1,0 +1,12 @@
+.banner{
+  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4818487/galshir-mojito.gif");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  flex: 0 0 50%;
+  position: sticky !important;
+  top: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
