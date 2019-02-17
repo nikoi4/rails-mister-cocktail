@@ -4,19 +4,14 @@
       <h1><%= @cocktail.name %></h1>
     </div>
 
-    <div class="cards">
+    <div class="doses">
       <ul>
         <% @cocktail.doses.each do |dose| %>
           <li><%= dose.description %> of <%= dose.ingredient.name %> | <%= link_to 'delete', dose_path(dose), method: :delete%></li>
         <% end %>
       </ul>
     </div>
-    <style>
-      .4stars {
-
-      }
-    </style>
-    <div class="cards">
+    <div class="reviews">
       <ul>
         <% @cocktail.reviews.each do |review| %>
           <li><%= review.content %> - <% review.rating.times do %><i class="fas fa-star"></i><% end %></li>
@@ -29,6 +24,6 @@
   </div>
 
   <div class=banner style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">>
+           url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
   </div>
 </div>

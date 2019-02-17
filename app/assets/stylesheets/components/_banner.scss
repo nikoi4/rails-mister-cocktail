@@ -1,5 +1,5 @@
 .banner{
-  background-image: url("https://cdn.dribbble.com/users/729829/screenshots/4818487/galshir-mojito.gif");
+  background-image: asset-url('spiningglass.gif');
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -7,6 +7,10 @@
   position: sticky !important;
   top: 0 !important;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h2 {
+    color: #cbd44a;
+  }
 }
