@@ -7,17 +7,18 @@
 
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+ <!--      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
            url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <div class="card-category"><%= cocktail.name %></div>
         <%= link_to "", cocktail_path(cocktail), class:'card-link' %>
-      </div>
+      </div> -->
       <div class="card-product">
         <img src='<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>'>
         <div class="card-product-infos">
-          <h2>cocktail.name</h2>
+          <h2><%= cocktail.name %></h2>
           <p>Product description with <strong>relevant info</strong> only.</p>
         </div>
+        <%= link_to "", cocktail_path(cocktail), class:'card-link' %>
       </div>
       <% end %>
     </div>
