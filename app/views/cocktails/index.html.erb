@@ -16,7 +16,7 @@
               <% if cocktail.reviews.last.nil? %>
                 <i> Not rated</i>
               <% else %>
-                <% cocktail.reviews.last.rating.times do %>
+                <% (cocktail.reviews.map{|review| review.rating}.sum.to_f / cocktail.reviews.size).round.times do %>
                   <i class="fas fa-star"></i>
                 <% end %>
               <% end %>

@@ -1,7 +1,18 @@
 .doses{
-
+  ul {
+    list-style-type: none;
+  }
 }
 
 .reviews{
   margin: 50px 0;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    margin: 20px 0;
+  }
+  i {
+    color: #cbd44a;
+  }
 }
