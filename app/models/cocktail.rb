@@ -4,6 +4,7 @@ class Cocktail < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
   validates :name, uniqueness: true, presence: true
+  validates :photo, presence: true
 
   mount_uploader :photo, PhotoUploader
 end
