@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_cocktail
+  before_action :set_cocktail, only: [:create, :new]
   def new
     @review = Review.new
   end
@@ -12,6 +12,13 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @cocktail = @review.cocktail
+    @review.destroy
+    redirect_to @cocktail
   end
 
   private

@@ -1,10 +1,17 @@
-<h1>Create a new <strong>Cocktail</strong></h1>
+<div class="background-gradient">
+  <h1>Create a new <strong>Cocktail</strong></h1>
 
-<%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.button :submit %>
-<% end %>
+  <div class="new-form">
+    <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo%>
+        <%= f.input :photo_cache, as: :hidden%>
+        <div class="center">
+          <%= f.button :submit, class:"center btn-transparent" %>
+        </div>
+    <% end %>
+  </div>
 
-<%= link_to 'back', root_path, class:"btn btn-primary" %>
+  <%= link_to 'back', cocktails_path, class:"btn-transparent" %>
+
+</div>
