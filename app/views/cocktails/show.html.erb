@@ -23,16 +23,18 @@
         <% end %>
       </ul>
     </div>
-
-    <%= link_to 'add dose', new_cocktail_dose_path(@cocktail), class:'btn-transparent' %>
-    <%= link_to 'add review', new_cocktail_review_path(@cocktail), class:'btn-transparent' %>
-    <%= link_to 'back', cocktails_path, class:'btn-transparent' %>
   </div>
 
-  <div class=banner style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+  <div class="banner flex-column-center-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
            url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-           <button type="button" class="btn-transparent" data-toggle="modal" data-target="#myModal">
-             add rating
+           <button type="button" class="btn-transparent" data-toggle="modal" data-target="#dose">
+             Add Dose
            </button>
+           <button type="button" class="btn-transparent" data-toggle="modal" data-target="#review">
+             Add rating
+           </button>
+           <%= link_to 'back', cocktails_path, class:'btn-transparent' %>
   </div>
+  <%= render "reviews/new", cocktail: @cocktail, review: Review.new %>
+  <%= render "doses/new", cocktail: @cocktail, dose: Dose.new %>
 </div>

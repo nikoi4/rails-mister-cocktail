@@ -1,0 +1,21 @@
+<div class="modal fade" id="dose" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Dose it!</h4>
+      </div>
+      <div class="modal-body">
+        <div class="new-form">
+          <%= simple_form_for [cocktail, dose] do |f| %>
+            <%= f.association :ingredient %>
+            <%= f.input :description %>
+            <div class="center">
+              <%= f.button :submit, class:"margin-top btn-transparent" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
