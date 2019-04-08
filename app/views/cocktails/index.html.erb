@@ -1,10 +1,8 @@
 <div class='drink-container'>
   <div class='list'>
-
     <div>
       <h1>Mr. Cocktail</h1>
     </div>
-
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
       <div class="card-product">
@@ -30,11 +28,14 @@
           </p>
         </div>
         <%= link_to "", cocktail_path(cocktail), class:'card-product-link' %>
+        <div class="absolute-bottom-right on-top">
+          <%= link_to cocktail_path(cocktail), method: :delete do %>
+            <i class="far fa-trash-alt delete"></i>
+        </div>
+        <% end %>
       </div>
       <% end %>
     </div>
-
-
   </div>
 
   <div class="banner">
