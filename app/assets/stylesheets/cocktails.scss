@@ -31,3 +31,17 @@
     margin-bottom: 50px;
   }
 }
+
+//Responsive
+@media screen and (max-width: 800px) {
+  .drink-container{
+    flex-direction: column-reverse;
+  }
+  .list {
+    width: 100%;
+    height: 100vh;
+  }
+  .banner{
+    height: 50vh;
+  }
+}
