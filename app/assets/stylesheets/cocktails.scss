@@ -44,4 +44,12 @@
   .banner{
     height: 50vh;
   }
+  .card-product{
+    height: 80px;
+    img {
+      height: 100%;
+      width: 80px;
+      object-fit: cover;
+    }
+  }
 }
