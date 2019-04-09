@@ -4,14 +4,9 @@
   <div class="new-form">
     <%= simple_form_for @cocktail do |f| %>
         <%= f.input :name %>
-        <div class="center">
-          <div class="form-group file required cocktail_photo">
-            <label class="file" for="cocktail_photo">
-              Image
-            </label>
-            <label class="file btn-transparent" for="cocktail_photo">Choose File</label>
-              <input class="form-control-file file required hidden" type="file" name="cocktail[photo]" id="cocktail_photo">
-          </div>
+        <div>
+          <label>Image</label>
+          <%= f.input :photo, input_html: { class: 'hidden' }, label_html: { class: 'btn-transparent center' } %>
         </div>
         <%= f.input :photo_cache, as: :hidden%>
         <div class="center">
